@@ -2,7 +2,14 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
 \usepackage{amsthm}
+\newtheorem{Def}{Definition}
+\newtheorem{Lemma}{Lemma}
+\newtheorem{Thm}{Theorem}
+\newtheorem{Coro}{Corollary}
+\newtheorem{Prop}{Proposition}
+
 
 \newcommand{\bb}[1]{\mathbb{#1}}
 \newcommand{\ra}{\rightarrow}
@@ -30,14 +37,28 @@
 \item[1]
         Let $\bb{X}$,$\bb{Y}$ and $\bb{Z}$ bet sets.
         Prove the transitivity of inclusion, that is,
-        $$(\bb{X} \in \bb{Y}) \land (\bb{Y} \in \bb{Z}) \Ra \bb{X} \in \bb{Z}$$
+        $$(\bb{X} \subseteq \bb{Y}) \land (\bb{Y} \subseteq \bb{Z}) \Ra \bb{X} \subseteq \bb{Z}$$
 \begin{proof}
+  Suppose exists an arbitary element $x \in \bb{X}$ then $x \in \bb{Y}$ by the definition of $\subseteq$,
+  Hence, $x \in \bb{Z}$ cause $\bb{Y} \subseteq \bb{Z}$.
+\end{proof}
+
+\item[2]
+        Verify the claims of Proposition 2.4
+\begin{proof}
+Suppose that $\bb{X}$, $\bb{Y}$, $\bb{Z}$ are subset of $\bb{U}$.
+\begin{enumerate}
+  \item[(i)]
+        $\bb{X} \cup \bb{Y} := \{ x \in \bb{U} : (x \in \bb{X}) \lor (x \in \bb{Y}) \}$ and
+        $\bb{Y} \cup \bb{Y} := \{ x \in \bb{U} : (x \in \bb{Y}) \lor (x \in \bb{X}) \}$.
+        Clearly, those two expression are equal by their definition. It's similar to $\bb{X} \cap \bb{Y}$.
+  \item[(ii)]
+        $\cap$ and $\cup$ are associativity due to associativity of $\land$ and $\lor$
+  \item[(iii)]
+\end{enumerate}
 
 \end{proof}
 
-
-\item [2]
-        Verify the claims of Proposition 2.4
 \end{enumerate}
 
 
