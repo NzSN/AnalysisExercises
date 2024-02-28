@@ -59,8 +59,15 @@ Suppose that $\bb{X}$, $\bb{Y}$, $\bb{Z}$ are subset of $\bb{U}$.
         $$\bb{X} \cup (\bb{Y} \cap \bb{Z}) \Ra
         (\bb{X} \cup \bb{Y}) \cap (\bb{X} \cup \bb{Z})$$
 
-        By definition, $\bb{X} \cup (\bb{Y})$
+        By definition,
 
+        $$\bb{X} \cup (\bb{Y} \cap \bb{Z}) \Ra
+        \forall x \in \bb{U}: (x \in \bb{X}) \lor (x \in \bb{Y} \land x \in \bb{Z})
+        \Ra \forall x \in \bb{U}: (x \in \bb{X} \lor x \in \bb{Y}) \land (x \in \bb{X} \lor x \in \bb{Z})$$
+
+        prove of another direction is similarly.
+  \item[(iv)]
+        directly from definitions.
 \end{enumerate}
 
 \end{proof}
