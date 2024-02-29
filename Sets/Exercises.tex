@@ -2,6 +2,7 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 
 \usepackage{amsthm}
 \newtheorem{Def}{Definition}
@@ -67,11 +68,76 @@ Suppose that $\bb{X}$, $\bb{Y}$, $\bb{Z}$ are subset of $\bb{U}$.
 
         prove of another direction is similarly.
   \item[(iv)]
-        directly from definitions.
-\end{enumerate}
+        Suppose that $\bb{X} \neq \bb{Y}$ because the case $\bb{X} = \bb{Y}$ is trivial. Under this assumption have $\bb{X} \subset \bb{Y}$. So the proposition can be rewrited as
 
+        $$\bb{X} \subset \bb{Y} \iff \bb{X} \cup \bb{Y} = \bb{Y}
+           \iff \bb{X} \cap \bb{Y} = \bb{X}$$
+
+        which is clearly definite true.
+\end{enumerate}
 \end{proof}
 
+\item[3] Provide a complete proof of Proposition 2.7.
+
+\begin{enumerate}
+  \item[(i)]
+        $(\bigcap_{\alpha} \bf{A}_{\alpha}) \cap
+        (\bigcap_{\beta} \bf{B}_{\beta}) =
+        \bigcap_{(\alpha, \beta)} \bf{A}_{\alpha} \cap \bf{B}_{\beta}$.
+
+        $(\bigcup_{\alpha} \bf{A}_{\alpha}) \cup (\bigcup_{\beta} \bf{B}_{\beta}) =
+         \bigcup_{(\alpha,\beta)} \bf{A}_{\alpha} \cup \bf{B}_{\beta}$ (associativity)
+
+
+        \begin{proof}
+          by definition we have
+          \begin{align*}
+            (\bigcap_{\alpha} \bf{A}_{\alpha}) \cap (\bigcap_{\beta} \bf{B}_{\beta})
+            & = \{ x \in \bb{X}: \forall \alpha \in \sf{A}: x \in \bf{A}_{\alpha} \} \cap
+              \{ x \in \bb{X}: \forall \beta \in \sf{B}: x \in \bf{B}_{\beta} \} \\
+            & = \{ x \in \bb{X}: \forall \alpha \in \sf{A}, \forall \beta \in \sf{B}:
+                           x \in \bf{A}_{\alpha} \land x \in \bf{B}_{\beta}\} \\
+            & = \bigcap_{(\alpha,\beta)} \bf{A}_{\alpha} \cap \bf{B}_{\beta}
+          \end{align*}
+
+          Prove of $\bigcup$ is similarly.
+        \end{proof}
+
+  \item[(ii)]
+        $(\bigcap_{\alpha} \bf{A}_{\alpha}) \cup (\bigcap_{\beta} \bf{B}_{\beta}) =
+        \bigcap_{(\alpha,\beta)} \bf{A}_{\alpha} \cup \bf{B}_{\beta}$ \\
+        $(\bigcup_{\alpha} \bf{A}_{\alpha}) \cap (\bigcup_{\beta} \bf{B}_{\beta}) =
+        \bigcup_{(\alpha,\beta)} \bf{A}_{\alpha} \cap \bf{B}_{\beta}$ (distribuitivity)
+
+        \begin{proof}
+          By Proposition 2.4(iii) and the definition of $\bigcap$ and $\bigcup$ we have
+          \begin{align*}
+            (\sf{A}_{\alpha_{0}} \cap \sf{A}_{\alpha_{1}} \text{...}) \cup
+            (\sf{B}_{\beta_{0}} \cap \sf{B}_{\beta_{1}} \text{...})
+            &= ((\sf{A}_{\alpha_{0}} \cap \sf{A}_{\alpha_{1}} \text{...}) \cup \sf{B}_{\beta_{0}} \cap
+              (\sf{A}_{\alpha_{0}} \cap \sf{A}_{\alpha_{1}} \text{...}) \cup \sf{B}_{\beta_{1}} \cap \text{...})
+          \end{align*}
+
+          Then $\bigcap_{(\alpha,\beta)} \sf{A}_{\alpha} \cup \sf{B}_{\beta}$ is got by apply Proposition 2.4(iii) again to right side of this equation.
+          This method can be apply to the second equation of this proposition.
+        \end{proof}
+  \item[(iii)]
+        $(\bigcap_{\alpha} \sf{A}_{\alpha})^{c} = \bigcup_{\alpha} \sf{A}^{c}_{\alpha}$ \\
+        $(\bigcup_{\alpha} \sf{A}_{\alpha})^{c} = \bigcap_{\alpha} \sf{A}^{c}_{\alpha}$ (de Morgan's laws)
+
+        \begin{proof}
+          Write your proof here.
+        \begin{align*}
+        \end{align*}
+        \end{proof}
+\end{enumerate}
+
+  \item[4] Let $\bf{X}$ and $\bf{Y}$ be nonempty sets. Show that
+        $$\bf{X} \times \bf{Y} = \bf{Y} \times \bf{X} \iff \bf{X} = \bf{Y}$$
+        \begin{proof}
+
+        \end{proof}
+        
 \end{enumerate}
 
 
