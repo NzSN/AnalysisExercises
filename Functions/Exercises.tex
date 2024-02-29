@@ -1,0 +1,105 @@
+\documentclass[11pt]{book}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{amsthm}
+\newtheorem{Def}{Definition}
+\newtheorem{Lemma}{Lemma}
+\newtheorem{Thm}{Theorem}
+\newtheorem{Coro}{Corollary}
+\newtheorem{Prop}{Proposition}
+
+
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+
+\title{Functions}
+\author{NzSN}
+\date{2024 February 29}
+
+\setlength{\parindent}{0pt}
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+\begin{document}
+\maketitle
+
+\vspace{0.2 cm}
+\section{Solutions}
+
+\begin{enumerate}
+  \item[1]
+        Prove Proposition 3.6.
+        \begin{proof}
+          By proposition 3.5, if there exists function $G$ such that $G \circ (g \circ f) = id_{\bf{X}}$ and
+          $(g \circ f) \circ G = id_{\bf{V}}$ then $(g \circ f)$ is bijective. And by definition of Inverse
+          Functions we know $G$ is the reverse function of $(g \circ f)$.
+
+          Due to $f$ and $g$ are bijective so exist $f^{-1}$ and $g^{-1}$ and due to
+          $\circ$ is associative so we have
+          $$f^{-1} \circ g^{-1} (g \circ f) = f^{-1} \circ (g^{-1} \circ g) \circ f =
+          f^{-1} \circ id_{\bf{Y}} \circ f = f^{-1} \circ f = id_{\bf{X}}$$
+          similarly
+          $$(g \circ f) \circ f^{-1} \circ g^{-1} = id_{\bf{V}}$$.
+
+          Hence, $(g \circ f)$ is bijective and $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+        \end{proof}
+
+  \item[3]
+        \begin{enumerate}
+          \item[(a)]
+                \begin{proof}
+                Because of $f: \bf{X} \ra \bf{Y}$ and $g: \bf{Y} \ra \bf{V}$ so
+                $$\exists \tilde{f}: im(f) \ra \bb{X}: \tilde{f} \circ f = id_{\bf{X}}$$
+                $$\exists \tilde{f}: im(f) \ra \bb{X}: \tilde{f} \circ f = id_{\bf{X}}$$
+
+                which implies that
+
+                $$(\tilde{f} \circ \tilde{g}) \circ (g \circ f) = id_{\bf{X}}$$
+
+                so $(f \circ g)$ is injective. Prove of surjective is similar.
+                \end{proof}
+          \item[(b)]
+                \begin{proof}
+                If $f$ is injective then there exists a unique function $\tilde{f}: im(f) \ra X$
+                such that $\tilde{f} \circ f = id_{\bf{X}}$. Then define function $\Tilde{f}$ in a
+                way that $\Tilde{f}\vert_{im(f)} = \tilde{f}$. Finally, we got a
+                function that $\Tilde{f} \circ f = id_{\bf{x}}$
+                \end{proof}
+          \item[(c)]
+                \begin{proof}
+                Similar to (b).
+                \end{proof}
+        \end{enumerate}
+  \item[6]
+        \begin{proof}
+          Let $f$ be a function that
+          $$f: \cal{P}(\bf{X}) \ra \{0,1\}^{\bf{X}}, A \mapsto \cal{X}_{A}$$
+          $\mathcal{X}$ is a function on $\bf{X}$ taking the values is $\{0,1\}$.
+          Exists $\bf{A} \subseteq \bf{X}$ that $\cal{X}_{\bf{A}}$ send all element
+          of $\bf{A}$ to 1. Due to domain of $f$ is all subset of $\bb{X}$ we must have
+          $\bf{A} \in \bf{X}$ so $f$ is surjective.\\
+
+          Define a function
+          $$\Tilde{f}: \{0,1\}^{\bf{X}} \ra \cal{P}(\bf{X}),\cal{X}_{\bf{A}} \mapsto A$$
+          then $\Tilde{f} \circ f = id_{\cal{P}(\bf{X})}$ so $f$ is injective. Hence $f$ is
+          bijective.
+        \end{proof}
+  \item[7]
+        \begin{enumerate}
+          \item[(a)]
+                Both domain and codomain of those two functions are same. Then if we prove that their graph are same then they are equal.
+
+                Choose arbitary element $x \in \bf{A}$ we have $f\vert_{A}(x) = (f \circ i)(x)$ directly from definition of restriction and inclusion.
+          \item[(b)]
+
+        \end{enumerate}
+\end{enumerate}
+\end{document}
